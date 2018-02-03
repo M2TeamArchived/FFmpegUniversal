@@ -97,6 +97,7 @@
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
     <PreBuildEvent>
       <Command>$(ProjectDir)FFmpegCopy.bat $(Platform)</Command>
@@ -129,6 +130,7 @@
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
     <PreBuildEvent>
       <Command>$(ProjectDir)FFmpegCopy.bat $(Platform)</Command>
@@ -150,6 +152,7 @@
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
     <PreBuildEvent>
       <Command>$(ProjectDir)FFmpegCopy.bat $(Platform)</Command>
@@ -265,7 +268,7 @@
     <ClInclude Include="FFmpeg\Include\libswresample\version.h" />
     <ClInclude Include="FFmpeg\Include\libswscale\swscale.h" />
     <ClInclude Include="FFmpeg\Include\libswscale\version.h" />
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="Version.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="FFmpeg\Lib\$(Platform)\libavcodec.a" />

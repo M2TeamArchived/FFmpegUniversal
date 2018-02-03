@@ -4,7 +4,7 @@
 pushd %~dp0..\
 
 xcopy /r /s /y Output\FFmpeg\Static\%1\include\*.* FFmpegUniversal\FFmpeg\Include\
-xcopy /r /s /y Output\FFmpeg\Static\%1\lib\*.a FFmpegUniversal\FFmpeg\Lib\ARM\
+xcopy /r /s /y Output\FFmpeg\Static\%1\lib\*.a FFmpegUniversal\FFmpeg\Lib\%1\
 
 popd
 
