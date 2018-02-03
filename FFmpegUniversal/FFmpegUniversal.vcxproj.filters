@@ -366,7 +366,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FFmpegUniversal.def" />
-    <None Include="FFmpegCopy.bat" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="FFmpegUniversal.rc" />

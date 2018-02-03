@@ -99,9 +99,7 @@
       <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
-    <PreBuildEvent>
-      <Command>$(ProjectDir)FFmpegCopy.bat $(Platform)</Command>
-    </PreBuildEvent>
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm'">
     <ClCompile>
@@ -132,9 +130,7 @@
       <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
-    <PreBuildEvent>
-      <Command>$(ProjectDir)FFmpegCopy.bat $(Platform)</Command>
-    </PreBuildEvent>
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -154,9 +150,7 @@
       <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
-    <PreBuildEvent>
-      <Command>$(ProjectDir)FFmpegCopy.bat $(Platform)</Command>
-    </PreBuildEvent>
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="FFmpeg\Include\libavcodec\avcodec.h" />
@@ -280,7 +274,6 @@
     <Library Include="FFmpeg\Lib\$(Platform)\libswscale.a" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="FFmpegCopy.bat" />
     <None Include="FFmpegUniversal.def" />
   </ItemGroup>
   <ItemGroup>

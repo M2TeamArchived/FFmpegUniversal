@@ -20,6 +20,8 @@ Your `FFmpegUniversal` folder should look as follows
 	                        https://trac.ffmpeg.org/wiki/CompilationGuide/WinRT
 	  FFmpegConfig.sh     - Internal script that contains FFmpeg configure 
 	                        options
+	  FFmpegCopy.bat      - Helper script to to copy the appropriate builds of 
+	                        FFmpeg libraries to the FFmpegUniversal project.
 	  FFmpegUniversal.sln - Microsoft Visual Studio 2017 solution file
 	  LICENSE
 	  README.md
@@ -36,7 +38,10 @@ build or do it manually using the instructions in the compilation guide.
 If you use the build script or follow the Wiki instructions as is you should 
 find the appropriate builds of FFmpeg libraries in the `Output/FFmpeg` folders.
 
-Simply open the FFmpegUniversal.sln and build it, you will get the merged 
+Then you can invoke `FFmpegCopy.bat` script to copy the appropriate builds of 
+FFmpeg libraries to the FFmpegUniversal project.
+
+Finally open the FFmpegUniversal.sln and build it, you will get the merged 
 FFmpeg dynamic library for the Windows Universal Platform.
 
 ## License
