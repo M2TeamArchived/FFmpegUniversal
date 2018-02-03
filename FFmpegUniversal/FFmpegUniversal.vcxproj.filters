@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="FFmpeg">
       <UniqueIdentifier>{b193902e-c596-41a0-8bf9-9cbf430f1040}</UniqueIdentifier>
     </Filter>
@@ -16,14 +12,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="pch.cpp" />
-    <ClCompile Include="FFmpegUniversal.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="targetver.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="FFmpeg\Include\libavutil\avconfig.h">
       <Filter>FFmpeg\Include</Filter>
     </ClInclude>
@@ -351,7 +339,7 @@
     <ClInclude Include="FFmpeg\Include\libavdevice\version.h">
       <Filter>FFmpeg\Include</Filter>
     </ClInclude>
-    <ClInclude Include="FFmpegUniversal.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="FFmpeg\Lib\$(Platform)\libavcodec.a">
@@ -378,10 +366,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FFmpegUniversal.def" />
+    <None Include="FFmpegCopy.bat" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="FFmpegUniversal.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <ResourceCompile Include="FFmpegUniversal.rc" />
   </ItemGroup>
 </Project>

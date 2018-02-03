@@ -65,24 +65,23 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <GenerateManifest>false</GenerateManifest>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <OutDir>$(SolutionDir)Output\Binary\$(MSBuildProjectName)\$(Platform)\</OutDir>
-    <IntDir>$(SolutionDir)Output\Binary\$(MSBuildProjectName)_Temp\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)_Temp\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <GenerateManifest>false</GenerateManifest>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <OutDir>$(SolutionDir)Output\Binary\$(MSBuildProjectName)\$(Platform)\</OutDir>
-    <IntDir>$(SolutionDir)Output\Binary\$(MSBuildProjectName)_Temp\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)_Temp\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <GenerateManifest>false</GenerateManifest>
     <IgnoreImportLibrary>false</IgnoreImportLibrary>
-    <OutDir>$(SolutionDir)Output\Binary\$(MSBuildProjectName)\$(Platform)\</OutDir>
-    <IntDir>$(SolutionDir)Output\Binary\$(MSBuildProjectName)_Temp\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)Output\$(MSBuildProjectName)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)Output\$(MSBuildProjectName)_Temp\$(Platform)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
       <WarningLevel>Level4</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
@@ -91,6 +90,7 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -98,6 +98,9 @@
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
     </Link>
+    <PreBuildEvent>
+      <Command>$(ProjectDir)FFmpegCopy.bat $(Platform)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm'">
     <ClCompile>
@@ -112,7 +115,6 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|arm'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
       <WarningLevel>Level4</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
@@ -120,6 +122,7 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,10 +130,12 @@
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
     </Link>
+    <PreBuildEvent>
+      <Command>$(ProjectDir)FFmpegCopy.bat $(Platform)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
       <WarningLevel>Level4</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
@@ -138,6 +143,7 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
       <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,9 +151,11 @@
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
     </Link>
+    <PreBuildEvent>
+      <Command>$(ProjectDir)FFmpegCopy.bat $(Platform)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="FFmpegUniversal.h" />
     <ClInclude Include="FFmpeg\Include\libavcodec\avcodec.h" />
     <ClInclude Include="FFmpeg\Include\libavcodec\avdct.h" />
     <ClInclude Include="FFmpeg\Include\libavcodec\avfft.h" />
@@ -257,18 +265,7 @@
     <ClInclude Include="FFmpeg\Include\libswresample\version.h" />
     <ClInclude Include="FFmpeg\Include\libswscale\swscale.h" />
     <ClInclude Include="FFmpeg\Include\libswscale\version.h" />
-    <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="targetver.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="FFmpegUniversal.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="FFmpeg\Lib\$(Platform)\libavcodec.a" />
@@ -280,6 +277,7 @@
     <Library Include="FFmpeg\Lib\$(Platform)\libswscale.a" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="FFmpegCopy.bat" />
     <None Include="FFmpegUniversal.def" />
   </ItemGroup>
   <ItemGroup>

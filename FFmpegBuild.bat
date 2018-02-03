@@ -16,8 +16,8 @@ set INCLUDE=%VCToolsInstallDir%include;%VCToolsInstallDir%atlmfc\include;%Window
 set LIB=%VCToolsInstallDir%lib\x86\store;%VCToolsInstallDir%atlmfc\lib\x86;%WindowsSdkDir%lib\%WindowsSDKLibVersion%ucrt\x86;%WindowsSdkDir%lib\%WindowsSDKLibVersion%um\x86;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\lib\um\x86;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6\Lib\um\x86
 set LIBPATH=%VCToolsInstallDir%ATLMFC\lib\x86;%VCToolsInstallDir%lib\x86;
 
-start "" %MSYS2_BIN% --login -x %~dp0FFmpegConfig.sh Static x86
-start "" %MSYS2_BIN% --login -x %~dp0FFmpegConfig.sh Shared x86
+start "" %MSYS2_BIN% --login -x %~dp0FFmpegConfig.sh Static Win32
+start "" %MSYS2_BIN% --login -x %~dp0FFmpegConfig.sh Shared Win32
 endlocal
 
 echo Building FFmpeg for Windows 10 apps x64...
@@ -45,6 +45,8 @@ set LIBPATH=%VCToolsInstallDir%ATLMFC\lib\arm;%VCToolsInstallDir%lib\arm;
 start "" %MSYS2_BIN% --login -x %~dp0FFmpegConfig.sh Static ARM
 start "" %MSYS2_BIN% --login -x %~dp0FFmpegConfig.sh Shared ARM
 endlocal
+
+goto Cleanup
 
 echo Building FFmpeg for Windows 10 apps ARM64...
 echo:

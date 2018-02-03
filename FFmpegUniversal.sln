@@ -8,9 +8,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{DAE27626-41F3-4379-B136-B75296C466D4}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		FFmpegBuildStatic.bat = FFmpegBuildStatic.bat
+		FFmpegBuild.bat = FFmpegBuild.bat
 		FFmpegConfig.sh = FFmpegConfig.sh
-		FFmpegCopy.bat = FFmpegCopy.bat
 		FFmpegDownload.bat = FFmpegDownload.bat
 		LICENSE = LICENSE
 		README.md = README.md
@@ -27,8 +26,8 @@ Global
 		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|ARM.Build.0 = Release|ARM
 		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x64.ActiveCfg = Release|x64
 		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x64.Build.0 = Release|x64
-		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x86.ActiveCfg = Release|x64
-		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x86.Build.0 = Release|x64
+		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x86.ActiveCfg = Release|Win32
+		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
