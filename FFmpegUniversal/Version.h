@@ -2,7 +2,7 @@
 Project: FFmpegUniversal
 Description: FFmpegUniversal Version Definition
 File Name: Version.h
-License: LGPL-2.1
+License: LGPL version 2.1 or later
 ******************************************************************************/
 
 #ifndef FFMPEG_VER
