@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFmpeg.Universal", "FFmpeg.Universal\FFmpeg.Universal.vcxproj", "{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{DAE27626-41F3-4379-B136-B75296C466D4}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|ARM.ActiveCfg = Release|ARM
+		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|ARM.Build.0 = Release|ARM
+		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x64.ActiveCfg = Release|x64
+		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x64.Build.0 = Release|x64
+		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x86.ActiveCfg = Release|x64
+		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x86.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A08E3398-B9D6-48AA-B044-D0548D7FD2F8}
+	EndGlobalSection
+EndGlobal
