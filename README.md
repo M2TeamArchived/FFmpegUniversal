@@ -36,8 +36,8 @@ build or do it manually using the instructions in the compilation guide.
 If you use the build script or follow the Wiki instructions as is you should 
 find the appropriate builds of FFmpeg libraries in the `Output/FFmpeg` folders.
 
-Simply open theFFmpegUniversal.sln and build it, you will get the merged FFmpeg
-dynamic library for the Windows Universal Platform.
+Simply open the FFmpegUniversal.sln and build it, you will get the merged 
+FFmpeg dynamic library for the Windows Universal Platform.
 
 ## License
 Same as the FFmpeg, distributed under the [LGPL version 2.1 or later](LICENSE).
