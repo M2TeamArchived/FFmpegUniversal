@@ -271,9 +271,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="FFmpegUniversal.rc" />
-  </ItemGroup>
-  <ItemGroup>
     <Library Include="FFmpeg\Lib\$(Platform)\libavcodec.a" />
     <Library Include="FFmpeg\Lib\$(Platform)\libavdevice.a" />
     <Library Include="FFmpeg\Lib\$(Platform)\libavfilter.a" />
@@ -284,6 +281,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FFmpegUniversal.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FFmpegUniversal.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
