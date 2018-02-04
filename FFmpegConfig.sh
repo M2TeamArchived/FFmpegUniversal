@@ -2,12 +2,6 @@
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 OPTIONS=
-OPTIONS="$OPTIONS --toolchain=msvc --disable-programs --disable-d3d11va"
-OPTIONS="$OPTIONS --disable-dxva2 --disable-debug --enable-cross-compile"
-OPTIONS="$OPTIONS --target-os=win32 --prefix=../../../../Output/FFmpeg/$1/$2"
-
-FFMPEG_CFLAGS="-MD -DWINAPI_FAMILY=WINAPI_FAMILY_APP -D_WIN32_WINNT=0x0A00"
-FFMPEG_LDFLAGS="-APPCONTAINER WindowsApp.lib"
 
 if [ "$1" == "Static" ]; then   
 	OPTIONS="$OPTIONS --enable-static"
@@ -19,31 +13,46 @@ fi
 
 if [ "$2" == "Win32" ]; then
 	OPTIONS="$OPTIONS --arch=x86"
-	FFMPEG_CFLAGS="$FFMPEG_CFLAGS"
 
 elif [ "$2" == "x64" ]; then
 	OPTIONS="$OPTIONS --arch=x86_64"
-	FFMPEG_CFLAGS="$FFMPEG_CFLAGS"
 
 elif [ "$2" == "ARM" ]; then
-	OPTIONS="$OPTIONS --arch=arm --as=armasm --cpu=armv7 --enable-thumb"
-	FFMPEG_CFLAGS="$FFMPEG_CFLAGS -D__ARM_PCS_VFP"
+	OPTIONS="$OPTIONS --arch=arm"
 
 elif [ "$2" == "ARM64" ]; then
-	OPTIONS="$OPTIONS --arch=aarch64 --as=armasm64 --cpu=armv8 --enable-thumb"
-	FFMPEG_CFLAGS="$FFMPEG_CFLAGS -D__ARM_PCS_VFP"
-
+	OPTIONS="$OPTIONS --arch=aarch64"
+	
 fi
 
-echo "Make Win10 $1 $2"
 pushd $DIR/FFmpeg
+echo "=== CONFIGURING ==="
 rm -rf ../Output/FFmpeg_Temp/$1/$2
 mkdir -p ../Output/FFmpeg_Temp/$1/$2
 cd ../Output/FFmpeg_Temp/$1/$2
 ../../../../FFmpeg/configure \
+	--toolchain=msvc \
+	--disable-programs \
+	--enable-cross-compile \
+	--disable-debug \
+	--disable-ffmpeg \
+	--disable-ffprobe \
+	--disable-doc \
+	--enable-runtime-cpudetect \
+	--disable-openssl \
+	--target-os=win32 \
+	--extra-cflags=-DWINAPI_FAMILY=WINAPI_FAMILY_APP \
+	--extra-cflags=-D_WIN32_WINNT=0x0A00 \
+	--extra-cflags=-DHAVE_UNISTD_H=0 \
+	--extra-ldflags=-APPCONTAINER \
+	--extra-ldflags=WindowsApp.lib \
+	--extra-cflags=-MD \
+	--extra-cxxflags=-MD \
 	$OPTIONS \
-	--extra-cflags="$FFMPEG_CFLAGS" \
-	--extra-ldflags="$FFMPEG_LDFLAGS"
+	--prefix=../../../../Output/FFmpeg/$1/$2
+echo "=== BUILDING ==="
+make -j16
+echo "=== INSTALLING ==="
 make install
 
 popd

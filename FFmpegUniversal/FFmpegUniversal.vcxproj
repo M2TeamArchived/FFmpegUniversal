@@ -96,7 +96,7 @@
       <SubSystem>Console</SubSystem>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
-      <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>$(ProjectDir)FFmpeg\Lib\$(Platform)\FFmpegUniversal.def</ModuleDefinitionFile>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
     <PreBuildEvent />
@@ -127,7 +127,7 @@
       <SubSystem>Console</SubSystem>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
-      <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>$(ProjectDir)FFmpeg\Lib\$(Platform)\FFmpegUniversal.def</ModuleDefinitionFile>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
     <PreBuildEvent />
@@ -147,7 +147,7 @@
       <SubSystem>Console</SubSystem>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
-      <ModuleDefinitionFile>FFmpegUniversal.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>$(ProjectDir)FFmpeg\Lib\$(Platform)\FFmpegUniversal.def</ModuleDefinitionFile>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
     <PreBuildEvent />
@@ -274,10 +274,10 @@
     <Library Include="FFmpeg\Lib\$(Platform)\libswscale.a" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="FFmpegUniversal.def" />
+    <ResourceCompile Include="FFmpegUniversal.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="FFmpegUniversal.rc" />
+    <None Include="FFmpeg\Lib\$(Platform)\FFmpegUniversal.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

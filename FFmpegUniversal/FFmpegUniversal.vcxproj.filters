@@ -365,9 +365,9 @@
     </Library>
   </ItemGroup>
   <ItemGroup>
-    <None Include="FFmpegUniversal.def" />
+    <ResourceCompile Include="FFmpegUniversal.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="FFmpegUniversal.rc" />
+    <None Include="FFmpeg\Lib\$(Platform)\FFmpegUniversal.def" />
   </ItemGroup>
 </Project>
