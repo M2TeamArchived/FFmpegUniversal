@@ -34,7 +34,7 @@ cd ../Output/FFmpeg_Temp/$1/$2
 	--toolchain=msvc \
 	--disable-programs \
 	--enable-cross-compile \
-	--disable-debug \
+	--enable-debug \
 	--disable-ffmpeg \
 	--disable-ffprobe \
 	--disable-doc \
@@ -51,7 +51,7 @@ cd ../Output/FFmpeg_Temp/$1/$2
 	$OPTIONS \
 	--prefix=../../../../Output/FFmpeg/$1/$2
 echo "=== BUILDING ==="
-make -j16
+make -j8
 echo "=== INSTALLING ==="
 make install
 

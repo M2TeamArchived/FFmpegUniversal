@@ -20,7 +20,7 @@ Your `FFmpegUniversal` folder should look as follows
 	                        https://trac.ffmpeg.org/wiki/CompilationGuide/WinRT
 	  FFmpegConfig.sh     - Internal script that contains FFmpeg configure 
 	                        options
-	  FFmpegCopy.bat      - Helper script to to copy the appropriate builds of 
+	  FFmpegCopy.bat      - Internal script to copy the appropriate builds of 
 	                        FFmpeg libraries to the FFmpegUniversal project.
 	  FFmpegUniversal.sln - Microsoft Visual Studio 2017 solution file
 	  LICENSE
@@ -31,14 +31,15 @@ how to
 [build FFmpeg for WinRT](https://trac.ffmpeg.org/wiki/CompilationGuide/WinRT) 
 apps. Follow the setup instruction carefuly to avoid build issues. After 
 completing the setup as instructed, you can invoke `FFmpegBuild.bat` script to 
-build or do it manually using the instructions in the compilation guide.
+build or do it manually using the instructions in the compilation guide after 
+you modify the MSYS2_BIN variable in the `FFmpegBuild.bat`.
 
 	BuildFFmpeg.bat    - Build for Windows 10 ARM, x64, and x86
 
 If you use the build script or follow the Wiki instructions as is you should 
 find the appropriate builds of FFmpeg libraries in the `Output/FFmpeg` folders.
 
-Finally open the FFmpegUniversal.sln and build it, you will get the merged 
+Simply open the FFmpegUniversal.sln and build it, you will get the merged 
 FFmpeg dynamic library for the Windows Universal Platform.
 
 ## License
