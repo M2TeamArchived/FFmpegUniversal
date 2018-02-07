@@ -22,6 +22,16 @@ popd
 rd /s /q "%~dp0Output/FFmpeg"
 rd /s /q "%~dp0Output/FFmpeg_Temp"
 rd /s /q "%~dp0FFmpegUniversal/FFmpeg"
+rd /s /q "%~dp0FFmpegUniversalSDK/ARM"
+rd /s /q "%~dp0FFmpegUniversalSDK/Win32"
+rd /s /q "%~dp0FFmpegUniversalSDK/x64"
+rd /s /q "%~dp0FFmpegUniversalSDK/libavcodec"
+rd /s /q "%~dp0FFmpegUniversalSDK/libavdevice"
+rd /s /q "%~dp0FFmpegUniversalSDK/libavfilter"
+rd /s /q "%~dp0FFmpegUniversalSDK/libavformat"
+rd /s /q "%~dp0FFmpegUniversalSDK/libavutil"
+rd /s /q "%~dp0FFmpegUniversalSDK/libswresample"
+rd /s /q "%~dp0FFmpegUniversalSDK/libswscale"
 
 echo Building FFmpeg for Windows 10 apps x86...
 echo:
