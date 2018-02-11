@@ -1,6 +1,6 @@
 # FFmpegUniversal
 
-Merged FFmpeg dynamic library for the Windows Universal Platform.
+Merged FFmpeg dynamic linked library for the Windows Universal Platform.
 
 ## Prerequisites
 Getting a compatible build of FFmpeg is required for this to work.

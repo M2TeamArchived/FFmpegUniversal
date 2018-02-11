@@ -1,13 +1,16 @@
 @setlocal
 @echo off
 
+rem Set the code page to reduce the compilation warnings
 chcp 65001
 
+rem Export full current PATH from environment into MSYS2
 set MSYS2_PATH_TYPE=inherit
 
-rem Set the environment variable
+rem Set the MSYS2 bash path
 set MSYS2_BIN="E:\Tools\msys64\usr\bin\bash.exe"
 
+rem Set the Windows SDK version
 set WindowsSDKversion=10.0.10240.0
 
 set VSInstallerFolder="%ProgramFiles(x86)%\Microsoft Visual Studio\Installer"
