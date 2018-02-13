@@ -10,7 +10,7 @@ License: LGPL version 2.1 or later
 
 #define FFMPEG_VER_MAJOR 3
 #define FFMPEG_VER_MINOR 4
-#define FFMPEG_VER_BUILD 1
+#define FFMPEG_VER_BUILD 2
 #define FFMPEG_VER_REV 0
 #endif
 
