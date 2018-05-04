@@ -18,17 +18,17 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFmpegUniversalSDK", "FFmpegUniversalSDK\FFmpegUniversalSDK.vcxitems", "{B4F7B4B6-D656-4FB5-A988-C62B38A3540C}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		FFmpegUniversalSDK\FFmpegUniversalSDK.vcxitems*{b4f7b4b6-d656-4fb5-a988-c62b38a3540c}*SharedItemsImports = 9
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|ARM.ActiveCfg = Release|ARM
 		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|ARM.Build.0 = Release|ARM
+		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|ARM64.ActiveCfg = Release|ARM64
+		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|ARM64.Build.0 = Release|ARM64
 		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x64.ActiveCfg = Release|x64
 		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x64.Build.0 = Release|x64
 		{BB79FD8C-5A98-47E7-97A2-0F8F6611271B}.Release|x86.ActiveCfg = Release|Win32

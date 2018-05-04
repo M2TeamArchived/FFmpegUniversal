@@ -6,6 +6,7 @@
 /Output
 /FFmpeg
 /FFmpegUniversal/FFmpeg
+/FFmpegUniversalSDK/ARM64
 /FFmpegUniversalSDK/ARM
 /FFmpegUniversalSDK/Win32
 /FFmpegUniversalSDK/x64

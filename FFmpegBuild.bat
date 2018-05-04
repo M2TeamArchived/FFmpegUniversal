@@ -11,7 +11,7 @@ rem Set the MSYS2 bash path
 set MSYS2_BIN="E:\Tools\msys64\usr\bin\bash.exe"
 
 rem Set the Windows SDK version
-set WindowsSDKversion=10.0.10240.0
+set WindowsSDKversion=10.0.17134.0
 
 set VSInstallerFolder="%ProgramFiles(x86)%\Microsoft Visual Studio\Installer"
 if %PROCESSOR_ARCHITECTURE%==x86 set VSInstallerFolder="%ProgramFiles%\Microsoft Visual Studio\Installer"
@@ -65,8 +65,6 @@ call "%VS2017InstallDir%\VC\Auxiliary\Build\vcvarsall.bat" x86_arm uwp %WindowsS
 %MSYS2_BIN% --login -x %~dp0FFmpegConfig.sh Shared ARM
 call "%~dp0FFmpegCopy.bat" ARM
 endlocal
-
-goto Cleanup
 
 echo Building FFmpeg for Windows 10 apps ARM64...
 echo:
