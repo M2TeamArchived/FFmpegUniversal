@@ -47,7 +47,7 @@ cd ../Output/FFmpeg_Temp/$1/$2
 	$OPTIONS \
 	--prefix=../../../../Output/FFmpeg/$1/$2
 echo "=== BUILDING ==="
-make -j8
+make -j12
 echo "=== INSTALLING ==="
 make install
 
