@@ -4,15 +4,3 @@
 
 /.vs
 /Output
-/FFmpegUniversal/FFmpeg
-/FFmpegUniversalSDK/ARM64
-/FFmpegUniversalSDK/ARM
-/FFmpegUniversalSDK/Win32
-/FFmpegUniversalSDK/x64
-/FFmpegUniversalSDK/libavcodec
-/FFmpegUniversalSDK/libavdevice
-/FFmpegUniversalSDK/libavfilter
-/FFmpegUniversalSDK/libavformat
-/FFmpegUniversalSDK/libavutil
-/FFmpegUniversalSDK/libswresample
-/FFmpegUniversalSDK/libswscale

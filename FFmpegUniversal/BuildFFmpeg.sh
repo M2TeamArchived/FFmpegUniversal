@@ -11,7 +11,7 @@ elif [ "$1" == "Shared" ]; then
 
 fi
 
-if [ "$2" == "Win32" ]; then
+if [ "$2" == "x86" ]; then
 	OPTIONS="$OPTIONS --arch=x86"
 
 elif [ "$2" == "x64" ]; then
@@ -25,8 +25,9 @@ elif [ "$2" == "ARM64" ]; then
 	
 fi
 
-pushd $DIR/FFmpeg
+pushd $DIR/../FFmpeg
 echo "=== CONFIGURING ==="
+rm -rf ../Output/FFmpeg/$1/$2
 rm -rf ../Output/FFmpeg_Temp/$1/$2
 mkdir -p ../Output/FFmpeg_Temp/$1/$2
 cd ../Output/FFmpeg_Temp/$1/$2
